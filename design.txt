@@ -1,0 +1,51 @@
+* Price oracle
+  The CBOND creation process involves directly checking Uniswap to discover the prices of Sync and the paired liquidity token. These values are only used to determine the relative proportion of assets in the CBOND being created by the user, and so there isn't any strong reliance on the accuracy of these prices, or benefit to an attacker manipulating them. The possibility of manipulating Uniswap prices in the same transaction as CBOND creation should not be considered a security vulnerability.
+
+  The Uniswap price oracle assumes that the given token has a V2 Token-Eth pair which is representative of its price. It assumes the value of the given token is not so low, or the number of decimals so much higher than 18, that an input to Uniswap of 10^18 would result in zero or nearly zero Wei returned.
+
+  The manual version of the price oracle, if used, allows administrators to set prices of Sync and liquidity tokens.
+
+* SYNC token
+  The Sync token (which has already been deployed) is a standard ERC20 token, with the typical burn and approveAndCall addon functions, and a minting function. Sync extends Ownable, to allow the administrator wallet to set access to minting powers to addresses. Minting powers can be used to mint tokens, and are necessary for the FRS and CBOND contracts to function as designed. No other addresses than those of these contracts will be approved for minting. Once these two contracts are deployed and approved for minting, administrator access to the Sync contract will be revoked to prevent the possibility for any further addresses gaining minting powers.
+
+* FRS
+  The Fair Release Schedule provides a fixed amount of tokens per day to users, in exchange for Eth. Each day for the FRS starts/ends at the same time. Users contribute Eth to the contract on the current day via the enter function, and when that day is over they can withdraw an amount of Sync which is a fraction of daily tokens proportional to the amount of Eth they contributed vs the total Eth contributed for that day.
+
+  The rewards start at 5,000,000 Sync per day distributed to users entering with Eth, and 5,000,000 to maintainers. Every 30 days, daily rewards are reduced by half, and after 12 30 day periods Sync is no longer rewarded.
+
+  Sync provided is directly minted. All Eth is distributed to maintainers, along with their share of Sync, on the transaction that transitions the FRS to the next day.
+
+* CBOND
+
+  a CBOND is created by retrieving from the user an amount of Sync tokens (max 100k, minimum admin adjustable), and an amount of Uniswap liquidity tokens. Which liquidity tokens are eligible is chosen by the contract owner, and their price is determined by an oracle which is also chosen by the contract owner. The value of Sync tokens and liquidity tokens provided to the contract is required to be the same, going by the oracle prices. The user specifies the amount of liquidity tokens, and the createCBOND function determines the amount of Sync to transfer from them (the transaction failing on exceeding a user provided maximum amount, similar to Uniswap). The Sync tokens transferred from the user are burned in this transaction and their amount recorded. A maturation date of 90 days, 180 days, 1, 2, or 3 years (approximated as 360, 720, 1080 days) from the present time is also selected. After the maturation date the initial amounts deposited can be withdrawn, plus an additional amount depending on the interest formula. The interest formula is as follows:
+
+  (1 + Base Interest Rate + Liquidity Pair Incentive Rate + Lucky Extra + 0.0005*(4*years_in_term-1))^(4*years_in_term)
+
+  Base Interest Rate:
+    min(0.2,max(0.001, Last Day Interest Rate * Sync Supply Today / Last Sync Supply))
+    *0.2 -> 20%
+     0.001 -> 0.1%
+
+  Liquidity Pair Incentive Rate:
+    min(0.005 , 0.005 * Last Liquidity Total / Liquidity Total Today)
+    *0.005 -> 0.5%
+
+  Lucky Extra:
+    If the token id of a CBOND ends in 77, a 5% bonus is added to the interest calculation. If it ends in 777 a 10% bonus is added instead. If toggled off by admin, bonus will always be 0%.
+
+  Previous day value updates:
+    As the first step in any transaction to functions where dividends are cashed out or CBONDs are created or matured, state variables storing historical Sync daily total supply (Sync Supply Today, Last Sync Supply), liquidity tokens held in the CBOND contract (Last Liquidity Total, Liquidity Total Today), as well as the Base Interest Rate (Last Day Interest Rate), are updated if no relevant value for the current day exists. Each day is 24 hours, with the first day starting when the CBOND contract is first deployed. Values are maintained for the current day and the previous recorded day. Only the first update on a given day records values; if there is an existing value for the current day no change is made. Last Day Interest Rate is always updated at the same time as Sync total supply. Last Day Interest Rate has an initial value of 4% (the previous value is used to compute each new value). "Liquidity tokens held" for a given token is updated when the function called creates or refers to a CBOND which is using that token.
+
+  Quarterly Mode:
+   A CBOND can optionally be in quarterly dividends mode, in this mode rather than returning the full amount plus interest at the end, a portion of interest is able to be withdrawn every 3 months, evenly spread across the full term (X amount every 3 months). The interest disbursed each quarter for this kind of CBOND is given by the following formula:
+
+   Base Interest Rate + Liquidity Pair Incentive Rate + Lucky Extra + 0.0005*(4*years_in_term-1)
+
+   This type of CBOND must have a term length of 1 year minimum.
+
+   After the maturation date the initial amount plus the final 3 month interest payment can be withdrawn. Any dividends remaining when the maturation transaction is called are automatically disbursed at that time.
+
+
+   The maturation transaction returns the liquidity tokens, mints to the user an amount of Sync tokens as described above, and destroys the CBOND NFT.
+
+   All disbursements of Sync are done via minting new tokens.

@@ -1,0 +1,2725 @@
+{
+  "contractName": "EnumerableMapMock",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "result",
+          "type": "bool"
+        }
+      ],
+      "name": "OperationResult",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "key",
+          "type": "uint256"
+        }
+      ],
+      "name": "contains",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "key",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "value",
+          "type": "address"
+        }
+      ],
+      "name": "set",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "key",
+          "type": "uint256"
+        }
+      ],
+      "name": "remove",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "length",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "at",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "key",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "value",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "key",
+          "type": "uint256"
+        }
+      ],
+      "name": "get",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"result\",\"type\":\"bool\"}],\"name\":\"OperationResult\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"at\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"key\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"value\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"key\",\"type\":\"uint256\"}],\"name\":\"contains\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"key\",\"type\":\"uint256\"}],\"name\":\"get\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"length\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"key\",\"type\":\"uint256\"}],\"name\":\"remove\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"key\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"value\",\"type\":\"address\"}],\"name\":\"set\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/aaa/SYNCToken/CBOND-CONTRACT/contracts/openzeppelin/mocks/EnumerableMapMock.sol\":\"EnumerableMapMock\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/aaa/SYNCToken/CBOND-CONTRACT/contracts/openzeppelin/mocks/EnumerableMapMock.sol\":{\"keccak256\":\"0xa3d6baf444ced611efeeb1e2eee2263998e8fb927e466450c3d9c4c10c786b0e\",\"urls\":[\"bzz-raw://ef959d8fb157c8bd34cf427561bc9293290116a902061234a05f95302657931b\",\"dweb:/ipfs/QmcxBd7DTLboiUmTUjzoPjgzw2ME3Fu6oDePfmpeoSqWzA\"]},\"/home/aaa/SYNCToken/CBOND-CONTRACT/contracts/openzeppelin/utils/EnumerableMap.sol\":{\"keccak256\":\"0x244e4b74b17716120cf28e58636f11c699b8c0c94628bd952a95cee038d7e32b\",\"urls\":[\"bzz-raw://198d566157120c526bd6b5086b32cae85a11389b8a538f533ba9f9447915da0e\",\"dweb:/ipfs/QmeE6d8KWERx7f1FVS5tMnitNJxBm2yWXRSEUBF7R6voLh\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610646806100206000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80631f7b6d32146100675780632f30c6f6146100815780634cc82215146100af5780639507d39a146100cc578063c34052e014610105578063e0886f9014610136575b600080fd5b61006f610174565b60408051918252519081900360200190f35b6100ad6004803603604081101561009757600080fd5b50803590602001356001600160a01b0316610185565b005b6100ad600480360360208110156100c557600080fd5b50356101d6565b6100e9600480360360208110156100e257600080fd5b5035610225565b604080516001600160a01b039092168252519081900360200190f35b6101226004803603602081101561011b57600080fd5b503561023d565b604080519115158252519081900360200190f35b6101536004803603602081101561014c57600080fd5b503561024f565b604080519283526001600160a01b0390911660208301528051918290030190f35b6000610180600061026b565b905090565b600061019881848463ffffffff61027616565b60408051821515815290519192507fed9840e0775590557ad736875d96c95cf1458b766335f74339951a32c82a9e33919081900360200190a1505050565b60006101e8818363ffffffff61029616565b60408051821515815290519192507fed9840e0775590557ad736875d96c95cf1458b766335f74339951a32c82a9e33919081900360200190a15050565b6000610237818363ffffffff6102a216565b92915050565b6000610237818363ffffffff6102ae16565b600080610262818463ffffffff6102ba16565b91509150915091565b6000610237826102d6565b600061028c84846001600160a01b0385166102da565b90505b9392505050565b600061028f8383610371565b600061028f838361044f565b600061028f8383610491565b60008080806102c986866104a9565b9097909650945050505050565b5490565b60008281526001840160205260408120548061033f57505060408051808201825283815260208082018481528654600181810189556000898152848120955160029093029095019182559151908201558654868452818801909252929091205561028f565b8285600001600183038154811061035257fe5b906000526020600020906002020160010181905550600091505061028f565b6000818152600183016020526040812054801561044557835460001980830191908101906000908790839081106103a457fe5b90600052602060002090600202019050808760000184815481106103c457fe5b60009182526020808320845460029093020191825560019384015491840191909155835482528983019052604090209084019055865487908061040357fe5b60008281526020808220600260001990940193840201828155600190810183905592909355888152898201909252604082209190915594506102379350505050565b6000915050610237565b600061028f83836040518060400160405280601e81526020017f456e756d657261626c654d61703a206e6f6e6578697374656e74206b65790000815250610524565b60009081526001919091016020526040902054151590565b8154600090819083106104ed5760405162461bcd60e51b81526004018080602001828103825260228152602001806105ef6022913960400191505060405180910390fd5b60008460000184815481106104fe57fe5b906000526020600020906002020190508060000154816001015492509250509250929050565b600082815260018401602052604081205482816105bf5760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561058457818101518382015260200161056c565b50505050905090810190601f1680156105b15780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b508460000160018203815481106105d257fe5b906000526020600020906002020160010154915050939250505056fe456e756d657261626c654d61703a20696e646578206f7574206f6620626f756e6473a2646970667358221220765b2a703ac57d11101c42d77550e82ab25b7f6630b611e52d9ee669382e960f64736f6c63430006060033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c80631f7b6d32146100675780632f30c6f6146100815780634cc82215146100af5780639507d39a146100cc578063c34052e014610105578063e0886f9014610136575b600080fd5b61006f610174565b60408051918252519081900360200190f35b6100ad6004803603604081101561009757600080fd5b50803590602001356001600160a01b0316610185565b005b6100ad600480360360208110156100c557600080fd5b50356101d6565b6100e9600480360360208110156100e257600080fd5b5035610225565b604080516001600160a01b039092168252519081900360200190f35b6101226004803603602081101561011b57600080fd5b503561023d565b604080519115158252519081900360200190f35b6101536004803603602081101561014c57600080fd5b503561024f565b604080519283526001600160a01b0390911660208301528051918290030190f35b6000610180600061026b565b905090565b600061019881848463ffffffff61027616565b60408051821515815290519192507fed9840e0775590557ad736875d96c95cf1458b766335f74339951a32c82a9e33919081900360200190a1505050565b60006101e8818363ffffffff61029616565b60408051821515815290519192507fed9840e0775590557ad736875d96c95cf1458b766335f74339951a32c82a9e33919081900360200190a15050565b6000610237818363ffffffff6102a216565b92915050565b6000610237818363ffffffff6102ae16565b600080610262818463ffffffff6102ba16565b91509150915091565b6000610237826102d6565b600061028c84846001600160a01b0385166102da565b90505b9392505050565b600061028f8383610371565b600061028f838361044f565b600061028f8383610491565b60008080806102c986866104a9565b9097909650945050505050565b5490565b60008281526001840160205260408120548061033f57505060408051808201825283815260208082018481528654600181810189556000898152848120955160029093029095019182559151908201558654868452818801909252929091205561028f565b8285600001600183038154811061035257fe5b906000526020600020906002020160010181905550600091505061028f565b6000818152600183016020526040812054801561044557835460001980830191908101906000908790839081106103a457fe5b90600052602060002090600202019050808760000184815481106103c457fe5b60009182526020808320845460029093020191825560019384015491840191909155835482528983019052604090209084019055865487908061040357fe5b60008281526020808220600260001990940193840201828155600190810183905592909355888152898201909252604082209190915594506102379350505050565b6000915050610237565b600061028f83836040518060400160405280601e81526020017f456e756d657261626c654d61703a206e6f6e6578697374656e74206b65790000815250610524565b60009081526001919091016020526040902054151590565b8154600090819083106104ed5760405162461bcd60e51b81526004018080602001828103825260228152602001806105ef6022913960400191505060405180910390fd5b60008460000184815481106104fe57fe5b906000526020600020906002020190508060000154816001015492509250509250929050565b600082815260018401602052604081205482816105bf5760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561058457818101518382015260200161056c565b50505050905090810190601f1680156105b15780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b508460000160018203815481106105d257fe5b906000526020600020906002020160010154915050939250505056fe456e756d657261626c654d61703a20696e646578206f7574206f6620626f756e6473a2646970667358221220765b2a703ac57d11101c42d77550e82ab25b7f6630b611e52d9ee669382e960f64736f6c63430006060033",
+  "immutableReferences": {},
+  "sourceMap": "96:868:66:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;96:868:66;;;;;;;",
+  "deployedSourceMap": "96:868:66:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;96:868:66;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;12:1:-1;9;2:12;657:85:66;;;:::i;:::-;;;;;;;;;;;;;;;;387:137;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;387:137:66;;;;;;-1:-1:-1;;;;;387:137:66;;:::i;:::-;;530:121;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;530:121:66;;:::i;869:93::-;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;869:93:66;;:::i;:::-;;;;-1:-1:-1;;;;;869:93:66;;;;;;;;;;;;;;281:100;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;281:100:66;;:::i;:::-;;;;;;;;;;;;;;;;;;748:114;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;748:114:66;;:::i;:::-;;;;;;;-1:-1:-1;;;;;748:114:66;;;;;;;;;;;;;;;;657:85;696:7;722:13;:4;:11;:13::i;:::-;715:20;;657:85;:::o;387:137::-;445:11;459:20;445:11;468:3;473:5;459:20;:8;:20;:::i;:::-;494:23;;;;;;;;;;445:34;;-1:-1:-1;494:23:66;;;;;;;;;;387:137;;;:::o;530:121::-;576:11;590:16;576:11;602:3;590:16;:11;:16;:::i;:::-;621:23;;;;;;;;;;576:30;;-1:-1:-1;621:23:66;;;;;;;;;;530:121;;:::o;869:93::-;916:7;942:13;916:7;951:3;942:13;:8;:13;:::i;:::-;935:20;869:93;-1:-1:-1;;869:93:66:o;281:100::-;333:4;356:18;333:4;370:3;356:18;:13;:18;:::i;748:114::-;796:11;;841:14;796:11;849:5;841:14;:7;:14;:::i;:::-;834:21;;;;748:114;;;:::o;7023:121:124:-;7092:7;7118:19;7126:3;7118:7;:19::i;6239:174::-;6328:4;6351:55;6356:3;6376;-1:-1:-1;;;;;6390:14:124;;6351:4;:55::i;:::-;6344:62;;6239:174;;;;;;:::o;6572:140::-;6649:4;6672:33;6680:3;6700;6672:7;:33::i;7848:160::-;7927:7;7969:30;7974:3;7994;7969:4;:30::i;6791:149::-;6875:4;6898:35;6908:3;6928;6898:9;:35::i;7472:224::-;7552:7;;;;7611:22;7615:3;7627:5;7611:3;:22::i;:::-;7580:53;;;;-1:-1:-1;7472:224:124;-1:-1:-1;;;;;7472:224:124:o;4483:108::-;4565:19;;4483:108::o;1828:678::-;1904:4;2037:17;;;:12;;;:17;;;;;;2069:13;2065:435;;-1:-1:-1;;2153:38:124;;;;;;;;;;;;;;;;;;27:10:-1;;39:1;23:18;;;45:23;;2135:12:124;:57;;;;;;;;;;;;;;;;;;;;;;;;2347:19;;2327:17;;;:12;;;:17;;;;;;;:39;2380:11;;2065:435;2458:5;2422:3;:12;;2446:1;2435:8;:12;2422:26;;;;;;;;;;;;;;;;;;:33;;:41;;;;2484:5;2477:12;;;;;2674:1517;2738:4;2871:17;;;:12;;;:17;;;;;;2903:13;;2899:1286;;3329:19;;-1:-1:-1;;3283:12:124;;;;3329:23;;;;3259:21;;3329:3;;:23;;3621;;;;;;;;;;;;;;;;3592:52;;3766:9;3736:3;:12;;3749:13;3736:27;;;;;;;;;;;;;;;;:39;;:27;;;;;:39;;;;;;;;;;;;;;;3854:14;;3841:28;;:12;;;:28;;;;;3872:17;;;3841:48;;3995:18;;3841:3;;3995:18;;;;;;;;;;;;;;-1:-1:-1;;3995:18:124;;;;;;;;;;;;;;;;;;;;;4088:17;;;:12;;;:17;;;;;;4081:24;;;;3995:18;-1:-1:-1;4120:11:124;;-1:-1:-1;;;;4120:11:124;2899:1286;4169:5;4162:12;;;;;5360:147;5426:7;5452:48;5457:3;5462;5452:48;;;;;;;;;;;;;;;;;:4;:48::i;4270:123::-;4341:4;4364:17;;;:12;;;;;:17;;;;;;:22;;;4270:123::o;4934:274::-;5037:19;;5001:7;;;;5037:27;-1:-1:-1;5029:74:124;;;;-1:-1:-1;;;5029:74:124;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5114:22;5139:3;:12;;5152:5;5139:19;;;;;;;;;;;;;;;;;;5114:44;;5176:5;:10;;;5188:5;:12;;;5168:33;;;;;4934:274;;;;;:::o;5615:315::-;5709:7;5747:17;;;:12;;;:17;;;;;;5797:12;5782:13;5774:36;;;;-1:-1:-1;;;5774:36:124;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;5774:36:124;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5863:3;:12;;5887:1;5876:8;:12;5863:26;;;;;;;;;;;;;;;;;;:33;;;5856:40;;;5615:315;;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.6.0;\n\nimport \"../utils/EnumerableMap.sol\";\n\ncontract EnumerableMapMock {\n    using EnumerableMap for EnumerableMap.UintToAddressMap;\n\n    event OperationResult(bool result);\n\n    EnumerableMap.UintToAddressMap private _map;\n\n    function contains(uint256 key) public view returns (bool) {\n        return _map.contains(key);\n    }\n\n    function set(uint256 key, address value) public {\n        bool result = _map.set(key, value);\n        emit OperationResult(result);\n    }\n\n    function remove(uint256 key) public {\n        bool result = _map.remove(key);\n        emit OperationResult(result);\n    }\n\n    function length() public view returns (uint256) {\n        return _map.length();\n    }\n\n    function at(uint256 index) public view returns (uint256 key, address value) {\n        return _map.at(index);\n    }\n\n\n    function get(uint256 key) public view returns (address) {\n        return _map.get(key);\n    }\n}\n",
+  "sourcePath": "/home/aaa/SYNCToken/CBOND-CONTRACT/contracts/openzeppelin/mocks/EnumerableMapMock.sol",
+  "ast": {
+    "absolutePath": "/home/aaa/SYNCToken/CBOND-CONTRACT/contracts/openzeppelin/mocks/EnumerableMapMock.sol",
+    "exportedSymbols": {
+      "EnumerableMapMock": [
+        9897
+      ]
+    },
+    "id": 9898,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9798,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:66"
+      },
+      {
+        "absolutePath": "/home/aaa/SYNCToken/CBOND-CONTRACT/contracts/openzeppelin/utils/EnumerableMap.sol",
+        "file": "../utils/EnumerableMap.sol",
+        "id": 9799,
+        "nodeType": "ImportDirective",
+        "scope": 9898,
+        "sourceUnit": 18564,
+        "src": "58:36:66",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 9897,
+        "linearizedBaseContracts": [
+          9897
+        ],
+        "name": "EnumerableMapMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 9802,
+            "libraryName": {
+              "contractScope": null,
+              "id": 9800,
+              "name": "EnumerableMap",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 18563,
+              "src": "135:13:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_EnumerableMap_$18563",
+                "typeString": "library EnumerableMap"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "129:55:66",
+            "typeName": {
+              "contractScope": null,
+              "id": 9801,
+              "name": "EnumerableMap.UintToAddressMap",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 18388,
+              "src": "153:30:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage_ptr",
+                "typeString": "struct EnumerableMap.UintToAddressMap"
+              }
+            }
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 9806,
+            "name": "OperationResult",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 9805,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9804,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "result",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9806,
+                  "src": "212:11:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 9803,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "212:4:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "211:13:66"
+            },
+            "src": "190:35:66"
+          },
+          {
+            "constant": false,
+            "id": 9808,
+            "mutability": "mutable",
+            "name": "_map",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 9897,
+            "src": "231:43:66",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage",
+              "typeString": "struct EnumerableMap.UintToAddressMap"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 9807,
+              "name": "EnumerableMap.UintToAddressMap",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 18388,
+              "src": "231:30:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage_ptr",
+                "typeString": "struct EnumerableMap.UintToAddressMap"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 9820,
+              "nodeType": "Block",
+              "src": "339:42:66",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9817,
+                        "name": "key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9810,
+                        "src": "370:3:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9815,
+                        "name": "_map",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9808,
+                        "src": "356:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage",
+                          "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
+                        }
+                      },
+                      "id": 9816,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "contains",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 18457,
+                      "src": "356:13:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$18388_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$18388_storage_ptr_$",
+                        "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256) view returns (bool)"
+                      }
+                    },
+                    "id": 9818,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "356:18:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 9814,
+                  "id": 9819,
+                  "nodeType": "Return",
+                  "src": "349:25:66"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "c34052e0",
+            "id": 9821,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "contains",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9811,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9810,
+                  "mutability": "mutable",
+                  "name": "key",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9821,
+                  "src": "299:11:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9809,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "299:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "298:13:66"
+            },
+            "returnParameters": {
+              "id": 9814,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9813,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9821,
+                  "src": "333:4:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 9812,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "333:4:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "332:6:66"
+            },
+            "scope": 9897,
+            "src": "281:100:66",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9840,
+              "nodeType": "Block",
+              "src": "435:89:66",
+              "statements": [
+                {
+                  "assignments": [
+                    9829
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 9829,
+                      "mutability": "mutable",
+                      "name": "result",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 9840,
+                      "src": "445:11:66",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "typeName": {
+                        "id": 9828,
+                        "name": "bool",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "445:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 9835,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9832,
+                        "name": "key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9823,
+                        "src": "468:3:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 9833,
+                        "name": "value",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9825,
+                        "src": "473:5:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9830,
+                        "name": "_map",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9808,
+                        "src": "459:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage",
+                          "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
+                        }
+                      },
+                      "id": 9831,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "set",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 18417,
+                      "src": "459:8:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintToAddressMap_$18388_storage_ptr_$_t_uint256_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$18388_storage_ptr_$",
+                        "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256,address) returns (bool)"
+                      }
+                    },
+                    "id": 9834,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "459:20:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "445:34:66"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9837,
+                        "name": "result",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9829,
+                        "src": "510:6:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 9836,
+                      "name": "OperationResult",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9806,
+                      "src": "494:15:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bool_$returns$__$",
+                        "typeString": "function (bool)"
+                      }
+                    },
+                    "id": 9838,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "494:23:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 9839,
+                  "nodeType": "EmitStatement",
+                  "src": "489:28:66"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "2f30c6f6",
+            "id": 9841,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "set",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9826,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9823,
+                  "mutability": "mutable",
+                  "name": "key",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9841,
+                  "src": "400:11:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9822,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "400:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9825,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9841,
+                  "src": "413:13:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9824,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "413:7:66",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "399:28:66"
+            },
+            "returnParameters": {
+              "id": 9827,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "435:0:66"
+            },
+            "scope": 9897,
+            "src": "387:137:66",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9857,
+              "nodeType": "Block",
+              "src": "566:85:66",
+              "statements": [
+                {
+                  "assignments": [
+                    9847
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 9847,
+                      "mutability": "mutable",
+                      "name": "result",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 9857,
+                      "src": "576:11:66",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "typeName": {
+                        "id": 9846,
+                        "name": "bool",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "576:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 9852,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9850,
+                        "name": "key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9843,
+                        "src": "602:3:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9848,
+                        "name": "_map",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9808,
+                        "src": "590:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage",
+                          "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
+                        }
+                      },
+                      "id": 9849,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "remove",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 18437,
+                      "src": "590:11:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintToAddressMap_$18388_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$18388_storage_ptr_$",
+                        "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256) returns (bool)"
+                      }
+                    },
+                    "id": 9851,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "590:16:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "576:30:66"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9854,
+                        "name": "result",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9847,
+                        "src": "637:6:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 9853,
+                      "name": "OperationResult",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9806,
+                      "src": "621:15:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bool_$returns$__$",
+                        "typeString": "function (bool)"
+                      }
+                    },
+                    "id": 9855,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "621:23:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 9856,
+                  "nodeType": "EmitStatement",
+                  "src": "616:28:66"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "4cc82215",
+            "id": 9858,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "remove",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9844,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9843,
+                  "mutability": "mutable",
+                  "name": "key",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9858,
+                  "src": "546:11:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9842,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "546:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "545:13:66"
+            },
+            "returnParameters": {
+              "id": 9845,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "566:0:66"
+            },
+            "scope": 9897,
+            "src": "530:121:66",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9867,
+              "nodeType": "Block",
+              "src": "705:37:66",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9863,
+                        "name": "_map",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9808,
+                        "src": "722:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage",
+                          "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
+                        }
+                      },
+                      "id": 9864,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 18471,
+                      "src": "722:11:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$18388_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_UintToAddressMap_$18388_storage_ptr_$",
+                        "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 9865,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "722:13:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 9862,
+                  "id": 9866,
+                  "nodeType": "Return",
+                  "src": "715:20:66"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "1f7b6d32",
+            "id": 9868,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "length",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9859,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "672:2:66"
+            },
+            "returnParameters": {
+              "id": 9862,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9861,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9868,
+                  "src": "696:7:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9860,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "696:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "695:9:66"
+            },
+            "scope": 9897,
+            "src": "657:85:66",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9882,
+              "nodeType": "Block",
+              "src": "824:38:66",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9879,
+                        "name": "index",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9870,
+                        "src": "849:5:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9877,
+                        "name": "_map",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9808,
+                        "src": "841:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage",
+                          "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
+                        }
+                      },
+                      "id": 9878,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "at",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 18507,
+                      "src": "841:7:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$18388_storage_ptr_$_t_uint256_$returns$_t_uint256_$_t_address_$bound_to$_t_struct$_UintToAddressMap_$18388_storage_ptr_$",
+                        "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256) view returns (uint256,address)"
+                      }
+                    },
+                    "id": 9880,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "841:14:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_address_$",
+                      "typeString": "tuple(uint256,address)"
+                    }
+                  },
+                  "functionReturnParameters": 9876,
+                  "id": 9881,
+                  "nodeType": "Return",
+                  "src": "834:21:66"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "e0886f90",
+            "id": 9883,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "at",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9871,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9870,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9883,
+                  "src": "760:13:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9869,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "760:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "759:15:66"
+            },
+            "returnParameters": {
+              "id": 9876,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9873,
+                  "mutability": "mutable",
+                  "name": "key",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9883,
+                  "src": "796:11:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9872,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "796:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9875,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9883,
+                  "src": "809:13:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9874,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "809:7:66",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "795:28:66"
+            },
+            "scope": 9897,
+            "src": "748:114:66",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9895,
+              "nodeType": "Block",
+              "src": "925:37:66",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9892,
+                        "name": "key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9885,
+                        "src": "951:3:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9890,
+                        "name": "_map",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9808,
+                        "src": "942:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage",
+                          "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
+                        }
+                      },
+                      "id": 9891,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "get",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 18533,
+                      "src": "942:8:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$18388_storage_ptr_$_t_uint256_$returns$_t_address_$bound_to$_t_struct$_UintToAddressMap_$18388_storage_ptr_$",
+                        "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256) view returns (address)"
+                      }
+                    },
+                    "id": 9893,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "942:13:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 9889,
+                  "id": 9894,
+                  "nodeType": "Return",
+                  "src": "935:20:66"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "9507d39a",
+            "id": 9896,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "get",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9886,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9885,
+                  "mutability": "mutable",
+                  "name": "key",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9896,
+                  "src": "882:11:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9884,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "882:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "881:13:66"
+            },
+            "returnParameters": {
+              "id": 9889,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9888,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9896,
+                  "src": "916:7:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9887,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "916:7:66",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "915:9:66"
+            },
+            "scope": 9897,
+            "src": "869:93:66",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 9898,
+        "src": "96:868:66"
+      }
+    ],
+    "src": "33:932:66"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/aaa/SYNCToken/CBOND-CONTRACT/contracts/openzeppelin/mocks/EnumerableMapMock.sol",
+    "exportedSymbols": {
+      "EnumerableMapMock": [
+        9897
+      ]
+    },
+    "id": 9898,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9798,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:66"
+      },
+      {
+        "absolutePath": "/home/aaa/SYNCToken/CBOND-CONTRACT/contracts/openzeppelin/utils/EnumerableMap.sol",
+        "file": "../utils/EnumerableMap.sol",
+        "id": 9799,
+        "nodeType": "ImportDirective",
+        "scope": 9898,
+        "sourceUnit": 18564,
+        "src": "58:36:66",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 9897,
+        "linearizedBaseContracts": [
+          9897
+        ],
+        "name": "EnumerableMapMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 9802,
+            "libraryName": {
+              "contractScope": null,
+              "id": 9800,
+              "name": "EnumerableMap",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 18563,
+              "src": "135:13:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_EnumerableMap_$18563",
+                "typeString": "library EnumerableMap"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "129:55:66",
+            "typeName": {
+              "contractScope": null,
+              "id": 9801,
+              "name": "EnumerableMap.UintToAddressMap",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 18388,
+              "src": "153:30:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage_ptr",
+                "typeString": "struct EnumerableMap.UintToAddressMap"
+              }
+            }
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 9806,
+            "name": "OperationResult",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 9805,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9804,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "result",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9806,
+                  "src": "212:11:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 9803,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "212:4:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "211:13:66"
+            },
+            "src": "190:35:66"
+          },
+          {
+            "constant": false,
+            "id": 9808,
+            "mutability": "mutable",
+            "name": "_map",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 9897,
+            "src": "231:43:66",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage",
+              "typeString": "struct EnumerableMap.UintToAddressMap"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 9807,
+              "name": "EnumerableMap.UintToAddressMap",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 18388,
+              "src": "231:30:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage_ptr",
+                "typeString": "struct EnumerableMap.UintToAddressMap"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 9820,
+              "nodeType": "Block",
+              "src": "339:42:66",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9817,
+                        "name": "key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9810,
+                        "src": "370:3:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9815,
+                        "name": "_map",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9808,
+                        "src": "356:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage",
+                          "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
+                        }
+                      },
+                      "id": 9816,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "contains",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 18457,
+                      "src": "356:13:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$18388_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$18388_storage_ptr_$",
+                        "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256) view returns (bool)"
+                      }
+                    },
+                    "id": 9818,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "356:18:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 9814,
+                  "id": 9819,
+                  "nodeType": "Return",
+                  "src": "349:25:66"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "c34052e0",
+            "id": 9821,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "contains",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9811,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9810,
+                  "mutability": "mutable",
+                  "name": "key",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9821,
+                  "src": "299:11:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9809,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "299:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "298:13:66"
+            },
+            "returnParameters": {
+              "id": 9814,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9813,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9821,
+                  "src": "333:4:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 9812,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "333:4:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "332:6:66"
+            },
+            "scope": 9897,
+            "src": "281:100:66",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9840,
+              "nodeType": "Block",
+              "src": "435:89:66",
+              "statements": [
+                {
+                  "assignments": [
+                    9829
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 9829,
+                      "mutability": "mutable",
+                      "name": "result",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 9840,
+                      "src": "445:11:66",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "typeName": {
+                        "id": 9828,
+                        "name": "bool",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "445:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 9835,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9832,
+                        "name": "key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9823,
+                        "src": "468:3:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 9833,
+                        "name": "value",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9825,
+                        "src": "473:5:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9830,
+                        "name": "_map",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9808,
+                        "src": "459:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage",
+                          "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
+                        }
+                      },
+                      "id": 9831,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "set",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 18417,
+                      "src": "459:8:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintToAddressMap_$18388_storage_ptr_$_t_uint256_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$18388_storage_ptr_$",
+                        "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256,address) returns (bool)"
+                      }
+                    },
+                    "id": 9834,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "459:20:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "445:34:66"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9837,
+                        "name": "result",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9829,
+                        "src": "510:6:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 9836,
+                      "name": "OperationResult",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9806,
+                      "src": "494:15:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bool_$returns$__$",
+                        "typeString": "function (bool)"
+                      }
+                    },
+                    "id": 9838,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "494:23:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 9839,
+                  "nodeType": "EmitStatement",
+                  "src": "489:28:66"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "2f30c6f6",
+            "id": 9841,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "set",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9826,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9823,
+                  "mutability": "mutable",
+                  "name": "key",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9841,
+                  "src": "400:11:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9822,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "400:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9825,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9841,
+                  "src": "413:13:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9824,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "413:7:66",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "399:28:66"
+            },
+            "returnParameters": {
+              "id": 9827,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "435:0:66"
+            },
+            "scope": 9897,
+            "src": "387:137:66",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9857,
+              "nodeType": "Block",
+              "src": "566:85:66",
+              "statements": [
+                {
+                  "assignments": [
+                    9847
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 9847,
+                      "mutability": "mutable",
+                      "name": "result",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 9857,
+                      "src": "576:11:66",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "typeName": {
+                        "id": 9846,
+                        "name": "bool",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "576:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 9852,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9850,
+                        "name": "key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9843,
+                        "src": "602:3:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9848,
+                        "name": "_map",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9808,
+                        "src": "590:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage",
+                          "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
+                        }
+                      },
+                      "id": 9849,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "remove",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 18437,
+                      "src": "590:11:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintToAddressMap_$18388_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$18388_storage_ptr_$",
+                        "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256) returns (bool)"
+                      }
+                    },
+                    "id": 9851,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "590:16:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "576:30:66"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9854,
+                        "name": "result",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9847,
+                        "src": "637:6:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 9853,
+                      "name": "OperationResult",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9806,
+                      "src": "621:15:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bool_$returns$__$",
+                        "typeString": "function (bool)"
+                      }
+                    },
+                    "id": 9855,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "621:23:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 9856,
+                  "nodeType": "EmitStatement",
+                  "src": "616:28:66"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "4cc82215",
+            "id": 9858,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "remove",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9844,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9843,
+                  "mutability": "mutable",
+                  "name": "key",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9858,
+                  "src": "546:11:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9842,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "546:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "545:13:66"
+            },
+            "returnParameters": {
+              "id": 9845,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "566:0:66"
+            },
+            "scope": 9897,
+            "src": "530:121:66",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9867,
+              "nodeType": "Block",
+              "src": "705:37:66",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9863,
+                        "name": "_map",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9808,
+                        "src": "722:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage",
+                          "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
+                        }
+                      },
+                      "id": 9864,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 18471,
+                      "src": "722:11:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$18388_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_UintToAddressMap_$18388_storage_ptr_$",
+                        "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 9865,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "722:13:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 9862,
+                  "id": 9866,
+                  "nodeType": "Return",
+                  "src": "715:20:66"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "1f7b6d32",
+            "id": 9868,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "length",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9859,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "672:2:66"
+            },
+            "returnParameters": {
+              "id": 9862,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9861,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9868,
+                  "src": "696:7:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9860,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "696:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "695:9:66"
+            },
+            "scope": 9897,
+            "src": "657:85:66",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9882,
+              "nodeType": "Block",
+              "src": "824:38:66",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9879,
+                        "name": "index",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9870,
+                        "src": "849:5:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9877,
+                        "name": "_map",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9808,
+                        "src": "841:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage",
+                          "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
+                        }
+                      },
+                      "id": 9878,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "at",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 18507,
+                      "src": "841:7:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$18388_storage_ptr_$_t_uint256_$returns$_t_uint256_$_t_address_$bound_to$_t_struct$_UintToAddressMap_$18388_storage_ptr_$",
+                        "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256) view returns (uint256,address)"
+                      }
+                    },
+                    "id": 9880,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "841:14:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_address_$",
+                      "typeString": "tuple(uint256,address)"
+                    }
+                  },
+                  "functionReturnParameters": 9876,
+                  "id": 9881,
+                  "nodeType": "Return",
+                  "src": "834:21:66"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "e0886f90",
+            "id": 9883,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "at",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9871,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9870,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9883,
+                  "src": "760:13:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9869,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "760:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "759:15:66"
+            },
+            "returnParameters": {
+              "id": 9876,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9873,
+                  "mutability": "mutable",
+                  "name": "key",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9883,
+                  "src": "796:11:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9872,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "796:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9875,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9883,
+                  "src": "809:13:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9874,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "809:7:66",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "795:28:66"
+            },
+            "scope": 9897,
+            "src": "748:114:66",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9895,
+              "nodeType": "Block",
+              "src": "925:37:66",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9892,
+                        "name": "key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9885,
+                        "src": "951:3:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9890,
+                        "name": "_map",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9808,
+                        "src": "942:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$18388_storage",
+                          "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
+                        }
+                      },
+                      "id": 9891,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "get",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 18533,
+                      "src": "942:8:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$18388_storage_ptr_$_t_uint256_$returns$_t_address_$bound_to$_t_struct$_UintToAddressMap_$18388_storage_ptr_$",
+                        "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256) view returns (address)"
+                      }
+                    },
+                    "id": 9893,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "942:13:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 9889,
+                  "id": 9894,
+                  "nodeType": "Return",
+                  "src": "935:20:66"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "9507d39a",
+            "id": 9896,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "get",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9886,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9885,
+                  "mutability": "mutable",
+                  "name": "key",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9896,
+                  "src": "882:11:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9884,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "882:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "881:13:66"
+            },
+            "returnParameters": {
+              "id": 9889,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9888,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9896,
+                  "src": "916:7:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9887,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "916:7:66",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "915:9:66"
+            },
+            "scope": 9897,
+            "src": "869:93:66",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 9898,
+        "src": "96:868:66"
+      }
+    ],
+    "src": "33:932:66"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.6+commit.6c089d02.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-10-08T19:13:25.029Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

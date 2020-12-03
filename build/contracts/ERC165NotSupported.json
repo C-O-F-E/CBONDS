@@ -1,0 +1,107 @@
+{
+  "contractName": "ERC165NotSupported",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/aaa/SYNCToken/CBOND-CONTRACT/contracts/openzeppelin/mocks/ERC165/ERC165NotSupported.sol\":\"ERC165NotSupported\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/aaa/SYNCToken/CBOND-CONTRACT/contracts/openzeppelin/mocks/ERC165/ERC165NotSupported.sol\":{\"keccak256\":\"0xd26fec8ea9435d8d6c6d754058a14c9e7f256221f5ef1b2ee7e5a72b0c9143fc\",\"urls\":[\"bzz-raw://c21dac13646eecf0242a34ee2aa618b8b5fb61de61b1a34f28cda35205719ee3\",\"dweb:/ipfs/QmdGUFM4feJZbwBR9rokc1Lfb74yVb75x8sGe6yHrGZ3mC\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220c6e26aac2d7b4ef61024469f0be1c8a1c1e6763567b5d28dbd7b953d7680a1a264736f6c63430006060033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220c6e26aac2d7b4ef61024469f0be1c8a1c1e6763567b5d28dbd7b953d7680a1a264736f6c63430006060033",
+  "immutableReferences": {},
+  "sourceMap": "58:31:49:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;58:31:49;;;;;;;",
+  "deployedSourceMap": "58:31:49:-:0;;;12:1:-1;9;2:12",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.6.0;\n\ncontract ERC165NotSupported { }\n",
+  "sourcePath": "/home/aaa/SYNCToken/CBOND-CONTRACT/contracts/openzeppelin/mocks/ERC165/ERC165NotSupported.sol",
+  "ast": {
+    "absolutePath": "/home/aaa/SYNCToken/CBOND-CONTRACT/contracts/openzeppelin/mocks/ERC165/ERC165NotSupported.sol",
+    "exportedSymbols": {
+      "ERC165NotSupported": [
+        8654
+      ]
+    },
+    "id": 8655,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 8653,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:49"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 8654,
+        "linearizedBaseContracts": [
+          8654
+        ],
+        "name": "ERC165NotSupported",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 8655,
+        "src": "58:31:49"
+      }
+    ],
+    "src": "33:57:49"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/aaa/SYNCToken/CBOND-CONTRACT/contracts/openzeppelin/mocks/ERC165/ERC165NotSupported.sol",
+    "exportedSymbols": {
+      "ERC165NotSupported": [
+        8654
+      ]
+    },
+    "id": 8655,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 8653,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:49"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 8654,
+        "linearizedBaseContracts": [
+          8654
+        ],
+        "name": "ERC165NotSupported",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 8655,
+        "src": "58:31:49"
+      }
+    ],
+    "src": "33:57:49"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.6+commit.6c089d02.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-10-08T19:13:24.996Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
